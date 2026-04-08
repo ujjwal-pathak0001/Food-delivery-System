@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: food-delivery-api
+  datasource:
+    url: jdbc:h2:mem:fooddelivery
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+app:
+  jwt:
+    # Minimum 32 characters (256-bit) for HS256. Override in production via JWT_SECRET.
+    secret: ${JWT_SECRET:FoodDeliveryJwtSecretKey_ChangeMe_InProduction_Min32Chars!}
+    expiration-ms: 86400000
+
+logging:
+  level:
+    org.springframework.security: INFO

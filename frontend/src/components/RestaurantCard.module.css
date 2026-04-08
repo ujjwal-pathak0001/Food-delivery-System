@@ -1,0 +1,69 @@
+.card {
+  display: flex;
+  gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrap {
+  width: 140px;
+  min-height: 120px;
+  flex-shrink: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 120px;
+}
+
+.body {
+  padding: 14px 16px 14px 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.cuisine {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dot {
+  opacity: 0.5;
+}
+
+@media (max-width: 500px) {
+  .imageWrap {
+    width: 100px;
+  }
+}

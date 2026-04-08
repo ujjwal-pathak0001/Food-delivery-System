@@ -1,0 +1,67 @@
+.hero {
+  margin-bottom: 28px;
+}
+
+.headline {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 18px;
+  line-height: 1.2;
+}
+
+.accent {
+  color: var(--swiggy-orange);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 560px;
+  padding: 4px 6px 4px 14px;
+  border: 1px solid var(--border);
+}
+
+.searchIcon {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 8px;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gridItem {
+  margin: 0;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.error {
+  color: var(--nonveg-red);
+}

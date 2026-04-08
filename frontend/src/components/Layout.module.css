@@ -1,0 +1,131 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandIcon {
+  color: var(--swiggy-orange);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--swiggy-orange);
+}
+
+.greet {
+  color: var(--text-muted);
+  font-weight: 600;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cta {
+  background: var(--swiggy-orange);
+  color: var(--white) !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.35);
+}
+
+.cta:hover {
+  background: var(--swiggy-orange-dark);
+}
+
+.ctaOutline {
+  border: 1.5px solid var(--swiggy-orange);
+  color: var(--swiggy-orange) !important;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.linkBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.linkBtn:hover {
+  color: var(--swiggy-orange);
+}
+
+.main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .greet {
+    display: none;
+  }
+
+  .headerInner {
+    padding: 0 14px;
+  }
+
+  .nav {
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
+  .cta {
+    padding: 8px 14px;
+  }
+}
