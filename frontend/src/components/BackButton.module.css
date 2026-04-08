@@ -1,0 +1,30 @@
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backBtn:hover {
+  background-color: #efefef;
+  border-color: #999;
+  color: #000;
+}
+
+.backBtn:active {
+  transform: scale(0.98);
+}
+
+.arrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

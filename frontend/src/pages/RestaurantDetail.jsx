@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { client } from '../api/client';
 import { useAuth } from '../context/AuthContext';
+import BackButton from '../components/BackButton';
 import styles from './RestaurantDetail.module.css';
 
 export default function RestaurantDetail() {
@@ -63,9 +64,7 @@ export default function RestaurantDetail() {
 
   return (
     <div>
-      <Link to="/" className={styles.back}>
-        ← Back to restaurants
-      </Link>
+      <BackButton to="/" />
       <header className={styles.header}>
         <img src={restaurant.imageUrl} alt="" className={styles.heroImg} />
         <div className={styles.headerText}>

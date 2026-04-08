@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { client } from '../api/client';
+import BackButton from '../components/BackButton';
 import styles from './OrdersPage.module.css';
 
 const statusLabels = {
@@ -39,6 +39,7 @@ export default function OrdersPage() {
   if (orders.length === 0) {
     return (
       <div>
+        <BackButton to="/" />
         <h1 className={styles.title}>Your orders</h1>
         <p className={styles.empty}>
           No orders yet. <Link to="/">Order something delicious</Link>
@@ -49,6 +50,7 @@ export default function OrdersPage() {
 
   return (
     <div>
+      <BackButton to="/" />
       <h1 className={styles.title}>Your orders</h1>
       <ul className={styles.list}>
         {orders.map((o) => (

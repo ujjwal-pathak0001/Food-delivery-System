@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { client } from '../api/client';
+import BackButton from '../components/BackButton';
 import styles from './CartPage.module.css';
 
 export default function CartPage() {
@@ -67,6 +68,7 @@ export default function CartPage() {
 
   return (
     <div>
+      <BackButton to="/" />
       <h1 className={styles.title}>Your cart</h1>
       {items.length === 0 ? (
         <p className={styles.empty}>
